@@ -55,7 +55,7 @@
     {{ if .Site.Params.disqus_proxy }}
     <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | relURL }}"/>
     {{ end }}
-    
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}">
 
@@ -67,6 +67,12 @@
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ "css/font-awesome.all.min.css" | relURL }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ "custom.css" | relURL }}">
 
     <!--  Custom CSS  -->
     {{ range .Site.Params.custom_css -}}
@@ -95,4 +101,3 @@
 {{ if .Site.Config.Services.GoogleAnalytics.ID }}
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
-
